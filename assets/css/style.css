@@ -1,0 +1,377 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+ * #CUSTOMEs PROPERTY
+\*-----------------------------------*/
+:root {
+
+    /**
+    * color
+    */
+    --blue: #2fc1ff;
+    --white: #fff;
+    --orange: #ff8700;
+    --gray: #5c5e5c;
+
+    /**
+    * Typography
+    */
+
+    --ff-quicksand: 'Quicksand', sans-serif;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+
+    /**
+    * Transition
+    */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --cubic-out: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-in: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+
+    /**
+    * spacing
+    */
+
+    --section-padding: 60px;
+}
+
+
+
+
+/*-----------------------------------*\
+ * #RESET CSS
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+table,
+button,
+ion-icon {
+    display: block;
+}
+
+input,
+button {
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-quicksand);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white);
+    font-size: 1.6rem;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 90%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 75%);
+}
+
+
+/*-----------------------------------*\
+ *             HEADER
+\*-----------------------------------*/
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 9px 17px -3px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 0.5rem;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+    visibility: hidden;
+    transition: 0.25s var(--cubic-out);
+    z-index: 3;
+}
+
+.navbar.active {
+    left: 0;
+    visibility: visible;
+    transition: 0.5s var(--cubic-in);
+}
+
+.navbar-list {
+    padding-inline: 2rem;
+}
+
+.navbar-item {
+    padding-block: 1.5rem;
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 600;
+    transition: var(--transition-1);
+}
+
+.navbar-item:hover {
+    background-color: rgba(73, 69, 69, 0.1);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: hsla(0, 0%, 0%, 0.118);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-1);
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* Cart list */
+/*-------------------------*/
+.cart-list {
+    position: absolute;
+    background-color: var(--white);
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: 0.25s var(--cubic-out);
+    z-index: 3;
+}
+
+.cart-list.active {
+    right: 0;
+    visibility: visible;
+    transition: 0.5s var(--cubic-in);
+}
+
+.cart-list::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.cart-close ion-icon {
+    margin-left: auto;
+    margin-right: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.cart-title {
+    padding-block: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    max-width: max-content;
+    margin-inline: auto;
+    border-bottom: 2px solid var(--gray);
+}
+
+.cart-item {
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(29, 170, 231, 0.1);
+    background-color: rgba(147, 203, 225, 0.067);
+}
+
+.cart-img img {
+    width: 6rem;
+    border-radius: 1rem;
+}
+
+.cart-name {
+    font-size: 1.3rem;
+    font-weight: var(--fw-600);
+}
+
+.memory {
+    margin-top: 0.3rem;
+}
+
+.memory,
+.date {
+    font-size: 1.3rem;
+}
+
+
+.cart-action ion-icon {
+    margin-left: auto;
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.quantity {
+    text-align: right;
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: var(--fw-600);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/*-------------------------*/
+
+/* Cart total */
+/* -------------------- */
+.cart-total {
+    padding-inline: 1.5rem;
+    padding-block: 1.2rem;
+}
+
+.total-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price {
+    font-size: 1.6rem;
+    font-weight: var(--fw-600);
+    color: var(--blue);
+}
+
+.detail-btn {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    margin-inline: auto;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    font-size: 1.5rem;
+    transition: var(--transition-1);
+}
+
+.detail-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.pay-btn {
+    background-color: var(--blue);
+    margin-inline: auto;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid var(--blue);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    font-size: 1.5rem;
+    transition: var(--transition-1);
+}
+
+.pay-btn:hover {
+    background-color: rgba(20, 148, 217, 0.759);
+}
+
+/* ------------------- */
+
+/* logo , menu */
+.logo img {
+    width: 8rem;
+}
+
+.menu-open,
+.menu-close,
+.cart-close,
+.cart ion-icon {
+    font-size: 2.5rem;
+    color: var(--gray);
+    transition: var(--transition-1);
+}
+
+.menu-open:hover,
+.menu-close:hover,
+.cart-close:hover,
+.cart ion-icon:hover {
+    color: #000;
+}
+
+.menu-close ion-icon {
+    margin-left: auto;
+    margin-right: 0.3rem;
+    margin-top: 0.5rem;
+}
