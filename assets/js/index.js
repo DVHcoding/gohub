@@ -28,4 +28,60 @@ for (let i = 0; i < cartElems.length; i++) {
 
 
 
+/**
+ * Search detail left
+ */
+
+const inputLeft = document.querySelector("[data-input-left]");
+const inputRight = document.querySelector("[data-input-right]");
+const searchDetailLeft = document.querySelector("[data-search-detail-left]");
+const searchDetailRight = document.querySelector("[data-search-detail-right]");
+
+const searchDetailCountry = document.querySelectorAll("[data-country]");
+const searchDetailDay = document.querySelectorAll("[data-day]");
+
+const overlayInput = document.querySelector("[data-overlay-input]");
+
+// When focus input 
+inputLeft.addEventListener("focus", function () {
+    searchDetailLeft.style.display = "block";
+    overlayInput.classList.add("active");
+})
+
+inputRight.addEventListener("focus", function () {
+    searchDetailRight.style.display = "block";
+    overlayInput.classList.add("active");
+})
+
+// When click country
+searchDetailCountry.forEach(function (country) {
+    country.addEventListener("click", function () {
+        inputLeft.value = this.textContent;
+        searchDetailLeft.style.display = "none";
+        overlayInput.classList.remove("active");
+    });
+});
+
+// When click day
+searchDetailDay.forEach(function (day) {
+    day.addEventListener("click", function () {
+        inputRight.value = this.textContent;
+        searchDetailRight.style.display = "none";
+        overlayInput.classList.remove("active");
+    });
+});
+
+// When blur input
+overlayInput.addEventListener("click", function () {
+    searchDetailLeft.style.display = "none";
+    searchDetailRight.style.display = "none";
+    overlayInput.classList.remove("active");
+})
+
+
+
+
+
+
+
 

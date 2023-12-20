@@ -16,6 +16,9 @@
     <!-- Link Css -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- Slick slider cdn  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 </head>
 
 <body>
@@ -114,12 +117,116 @@
                 </div>
             </ul>
         </div>
-
     </header>
+
+    <main>
+        <!-- SLIDER -->
+        <section class="section slider">
+            <div class="container">
+                <div class="slider-list">
+                    <div class="slider-item">
+                        <img src="./assets/imgs/slider-1.jpg" alt="">
+                    </div>
+
+                    <div class="slider-item">
+                        <img src="./assets/imgs/slider-2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="slider-bottom">
+                    <form class="search-box">
+                        <div class="input-left">
+                            <input type="text" placeholder="Quốc gia" data-input-left>
+                        </div>
+
+                        <div class="search-line">|</div>
+
+                        <div class="input-right">
+                            <input type="text" placeholder="Số ngày" data-input-right>
+                        </div>
+
+                        <button class="search-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </button>
+                    </form>
+
+                    <div class="search-detail-left" data-search-detail-left>
+                        <p class="search-detail-title">Tìm kiếm nhiều nhất</p>
+                        <span class="country-title">Quốc gia</span>
+
+                        <ul class="detail-list">
+                            <li class="detail-item">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <span class="country" data-country>Hàn Quốc</span>
+                            </li>
+
+                            <li class="detail-item">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <span class="country" data-country>Việt Nam</span>
+                            </li>
+
+                            <li class="detail-item">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <span class="country" data-country>Nhật Bản</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="search-detail-right" data-search-detail-right>
+                        <ul class="day-list">
+                            <li class="day-item">
+                                <span class="day" data-day>1 ngày</span>
+                            </li>
+
+                            <li class="day-item">
+                                <span class="day" data-day>2 ngày</span>
+                            </li>
+
+                            <li class="day-item">
+                                <span class="day" data-day>3 ngày</span>
+                            </li>
+
+                            <li class="day-item">
+                                <span class="day" data-day>4 ngày</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="slider-bottom-text">
+                        Kiểm tra thiết bị có hỗ trợ eSIM không
+                        <a href="#">Tại đây</a>
+                    </p>
+
+                    <div class="overlay-input" data-overlay-input></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 
     <!-- Link js -->
     <script src="./assets/js/index.js"></script>
+
+    <!-- Slick slider and jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.slider-list').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+            })
+        });
+    </script>
+
 
     <!-- Icon-cdn -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
