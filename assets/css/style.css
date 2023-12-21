@@ -11,8 +11,10 @@
     * color
     */
     --blue: #2fc1ff;
+    --light-blue: #f4fcff;
     --white: #fff;
     --orange: #ff8700;
+    --light-orange: #fffcf3;
     --gray: #5c5e5c;
 
     /**
@@ -580,4 +582,184 @@ section {
 .overlay-input.active {
     opacity: 1;
     pointer-events: all;
+}
+
+
+/*-----------------------------------*\
+ * # NATIONAL FLAG
+\*-----------------------------------*/
+
+.south-asia-item img,
+.asia-item img,
+.europe-item img,
+.other-item img {
+    width: 3rem;
+}
+
+.south-asia-title,
+.asia-title,
+.europe-title,
+.other-title {
+    font-size: 1.4rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.south-asia-item,
+.asia-item,
+.europe-item,
+.other-item {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: var(--transition-1);
+}
+
+.south-asia-item:hover,
+.asia-item:hover,
+.europe-item:hover,
+.other-item:hover {
+    background-color: var(--light-blue);
+}
+
+
+/* ---------------- */
+.national-flag {
+    margin-top: 3rem;
+}
+
+.national-flag .container {
+    padding-inline: 1.3rem;
+}
+
+.national-flag-title {
+    font-size: 2.3rem;
+}
+
+.national-flag-box {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+    column-gap: 2rem;
+}
+
+.national-flag-name {
+    font-size: 1.4rem;
+}
+
+
+
+/*-----------------------------------*\
+ * # ADVERTISE  
+\*-----------------------------------*/
+
+.gif-item img {
+    width: 70%;
+    margin: auto;
+}
+
+.advertise-content {
+    margin-top: 2rem;
+    background-color: var(--light-blue);
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+}
+
+.advertise-gif .slick-dots {
+    bottom: 0.3rem;
+    right: 50%;
+}
+
+.advertise-content-title {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.advertise-content-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.advertise-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.advertise-content-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.advertise-content-item.active {
+    border: 2px solid var(--blue);
+}
+
+.advertise-item-title {
+    color: var(--blue);
+    font-weight: var(--fw-700);
+    margin-bottom: 0.5rem;
+}
+
+.advertise-item-subtitle {
+    font-size: 1.3rem;
+}
+
+.advertise-item-subtitle a {
+    display: inline;
+    color: var(--blue);
+    font-weight: var(--fw-600);
+}
+
+
+/*-----------------------------------*\
+ * # FEATURE 
+\*-----------------------------------*/
+
+.feature {
+    margin-top: 2.2rem;
+    background-color: var(--light-orange);
+}
+
+.feature .container {
+    padding: 2rem;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: var(--fw-700);
+    margin-bottom: 2rem;
+}
+
+.feature-title span {
+    display: inline;
+    color: var(--blue);
+}
+
+.feature-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item img {
+    width: 7rem;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item-title {
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+
+.feature-item-subtitle {
+    font-size: 1.4rem;
 }

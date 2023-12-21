@@ -80,7 +80,47 @@ overlayInput.addEventListener("click", function () {
 
 
 
+/**
+ * Advertise 
+ */
 
+var items = document.querySelectorAll('.advertise-content-item');
+
+// Variable to keep track of the last clicked item's index
+var lastClickedIndex = null;
+
+// Function to set an item as active by adding the 'active' class and removing it from other items
+function setActive(index) {
+    items.forEach(function (item) {
+        item.classList.remove('active');
+    });
+    items[index].classList.add('active');
+}
+
+// Add click event listeners to each item
+items.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+        // If an item was clicked before, remove 'active' class from it
+        if (lastClickedIndex !== null) {
+            items[lastClickedIndex].classList.remove('active');
+        }
+        // Set the clicked item as active
+        setActive(index);
+        // Update the last clicked index
+        lastClickedIndex = index;
+    });
+});
+
+// Auto switch to the next item every 3 seconds
+var currentIndex = 0;
+
+// Set up an interval to run a function every 3 seconds
+setInterval(function () {
+    // Set the current item as active
+    setActive(currentIndex);
+    // Move to the next item, and wrap around to the beginning if necessary
+    currentIndex = (currentIndex + 1) % items.length;
+}, 3000);
 
 
 
