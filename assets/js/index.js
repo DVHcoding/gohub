@@ -9,20 +9,18 @@ const cart = document.querySelector("[data-cart]");
 const cartList = document.querySelector("[data-cart-list]");
 const cartClose = document.querySelector("[data-cart-close]");
 
-const navElems = [menuOpen, menuClose, overlay];
-const cartElems = [cart, cartClose, overlay];
+const navElems = [menuOpen, menuClose];
+const cartElems = [cart, cartClose];
 
 for (let i = 0; i < navElems.length; i++) {
     navElems[i].addEventListener("click", function () {
         navbar.classList.toggle("active");
-        overlay.classList.toggle("active");
     });
 }
 
 for (let i = 0; i < cartElems.length; i++) {
     cartElems[i].addEventListener("click", function () {
         cartList.classList.toggle("active");
-        overlay.classList.toggle("active");
     });
 }
 
@@ -164,20 +162,22 @@ questionItems.forEach(function (item) {
  * media query for cart
  */
 
+
 var navbarCart = document.querySelector('.navbar-add');
 
-// Add event listener for mouseout on navbar-cart
-navbarCart.addEventListener('mouseover', function () {
-    cartList.style.display = 'block';
-});
+navbarCart.addEventListener('click', function () {
+    if (cartList.style.display == "block") {
+        cartList.style.display = "none";
+    } else {
+        cartList.style.display = "block";
+    }
 
+    overlay.classList.add("active");
 
-// Add event listener for mouseover on cart-list
-cartList.addEventListener('mouseover', function () {
-    cartList.style.display = 'block';
-});
-
-// Add event listener for mouseout on cart-list
-cartList.addEventListener('mouseout', function () {
-    cartList.style.display = 'none';
+    overlay.addEventListener("click", function () {
+        if (overlay.classList.contains("active")) {
+            cartList.style.display = "none";
+            overlay.classList.remove("active");
+        }
+    })
 });

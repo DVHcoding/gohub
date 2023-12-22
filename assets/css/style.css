@@ -203,10 +203,10 @@ section {
     pointer-events: all;
 }
 
-
-.navbar-cart-add {
+.navbar-add {
     display: none;
 }
+
 
 /* Cart list */
 /*-------------------------*/
@@ -1527,10 +1527,13 @@ question-item-title p {
     .menu-close,
     .cart-close,
     .navbar,
-    .overlay,
     .cart-title,
     .cart {
         display: none;
+    }
+
+    .overlay {
+        z-index: 0;
     }
 
     .navbar,
@@ -1540,6 +1543,7 @@ question-item-title p {
     }
 
     .navbar-add {
+        display: block;
         font-weight: var(--fw-700);
         margin-top: 0.5rem;
         padding-block: 1rem;
@@ -1559,10 +1563,11 @@ question-item-title p {
         font-size: 2rem;
     }
 
-    .navbar-cart-add-link {
+    .navbar-cart-link {
         color: #000;
         font-size: 1.6rem;
         font-weight: var(--fw-700);
+        cursor: default;
     }
 
     .cart-list {
