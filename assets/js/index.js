@@ -124,4 +124,37 @@ setInterval(function () {
 
 
 
+/**
+ * Question
+ */
 
+const questionItems = document.querySelectorAll("[data-question-item]");
+
+let currentlyOpenItem = null;
+
+questionItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+        const itemTitle = this.querySelector("[data-question-item-title]");
+        const detail = this.querySelector("[data-question-item-detail]");
+        const arrow = this.querySelector("[data-arrow]");
+
+        // Close the currently open item
+        if (currentlyOpenItem && currentlyOpenItem !== item) {
+            const currentTitle = currentlyOpenItem.querySelector("[data-question-item-title]");
+            const currentDetail = currentlyOpenItem.querySelector("[data-question-item-detail]");
+            const currentArrow = currentlyOpenItem.querySelector("[data-arrow]");
+
+            currentTitle.classList.remove("active");
+            currentDetail.classList.remove("active");
+            currentArrow.style.transform = "rotate(0deg)";
+        }
+
+        // Toggle the active state for the clicked item
+        itemTitle.classList.toggle("active");
+        detail.classList.toggle("active");
+        arrow.style.transform = (arrow.style.transform === "rotate(-180deg)") ? "rotate(0deg)" : "rotate(-180deg)";
+
+        // Update the currently open item
+        currentlyOpenItem = (currentlyOpenItem === item) ? null : item;
+    });
+});

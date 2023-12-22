@@ -934,3 +934,146 @@ section {
     object-fit: cover;
     margin: auto;
 }
+
+
+/*-----------------------------------*\
+ * # QUESTION 
+\*-----------------------------------*/
+
+.question .container {
+    padding-inline: 2rem;
+}
+
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.question-item {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.question-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.question-item-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: default;
+}
+
+question-item-title p {
+    font-size: 1.5rem;
+}
+
+.question-item-title.active {
+    color: var(--blue);
+    font-weight: var(--fw-700);
+}
+
+.question-item-title ion-icon {
+    min-width: 2.5rem;
+    transition: var(--transition-2);
+}
+
+.question-item-detail {
+    max-height: 0;
+    margin-top: 1rem;
+    padding-inline: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: justify;
+    transition: max-height 0.8s var(--cubic-in);
+    overflow: hidden;
+}
+
+.question-item-detail.active {
+    max-height: 100vh;
+}
+
+
+
+
+/*-----------------------------------*\
+ * # FOOTER
+\*-----------------------------------*/
+
+.footer {
+    margin-top: 5rem;
+    box-shadow: 0px -7px 8px -3px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    padding-block: 2rem;
+    padding-inline: 1rem;
+}
+
+.footer-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-logo {
+    margin-bottom: 5rem;
+}
+
+.footer-logo img {
+    width: 40%;
+}
+
+.footer-item span,
+.footer-item a {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.footer-item a {
+    color: var(--gray);
+    font-weight: var(--fw-600);
+    transition: var(--transition-1);
+}
+
+.footer-item a:hover {
+    color: #000;
+}
+
+.certificate {
+    margin-top: 2rem;
+    width: 60%;
+}
+
+/* ------------------- */
+
+.footer-bottom {
+    background-color: var(--blue);
+    padding-inline: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.footer-left {
+    text-align: center;
+}
+
+.footer-left p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.footer-right p {
+    text-align: center;
+    font-size: 1.4rem;
+}
