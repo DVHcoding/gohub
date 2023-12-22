@@ -158,3 +158,26 @@ questionItems.forEach(function (item) {
         currentlyOpenItem = (currentlyOpenItem === item) ? null : item;
     });
 });
+
+
+/**
+ * media query for cart
+ */
+
+var navbarCart = document.querySelector('.navbar-add');
+
+// Add event listener for mouseout on navbar-cart
+navbarCart.addEventListener('mouseover', function () {
+    cartList.style.display = 'block';
+});
+
+
+// Add event listener for mouseover on cart-list
+cartList.addEventListener('mouseover', function () {
+    cartList.style.display = 'block';
+});
+
+// Add event listener for mouseout on cart-list
+cartList.addEventListener('mouseout', function () {
+    cartList.style.display = 'none';
+});

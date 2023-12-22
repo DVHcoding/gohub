@@ -31,33 +31,45 @@
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
 
-            <nav class="navbar" data-navbar>
-                <div class="menu-close" data-menu-close>
-                    <ion-icon name="close-outline"></ion-icon>
-                </div>
+            <div class="navbox">
+                <a href="#" class="logo">
+                    <img src="./assets/imgs/logo_header.png" alt="">
+                </a>
 
-                <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <a href="" class="navbar-link">Trang chủ</a>
-                    </li>
+                <nav class="navbar" data-navbar>
+                    <div class="menu-close" data-menu-close>
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
 
-                    <li class="navbar-item">
-                        <a href="" class="navbar-link">Ưu đãi</a>
-                    </li>
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a href="" class="navbar-link">Trang chủ</a>
+                        </li>
 
-                    <li class="navbar-item">
-                        <a href="" class="navbar-link">Hướng dẫn</a>
-                    </li>
+                        <li class="navbar-item">
+                            <a href="" class="navbar-link">Ưu đãi</a>
+                        </li>
 
-                    <li class="navbar-item">
-                        <a href="" class="navbar-link">Blog</a>
-                    </li>
-                </ul>
-            </nav>
+                        <li class="navbar-item">
+                            <a href="" class="navbar-link">Hướng dẫn</a>
+                        </li>
 
-            <a href="#" class="logo">
-                <img src="./assets/imgs/logo_header.png" alt="">
-            </a>
+                        <li class="navbar-item">
+                            <a href="" class="navbar-link">Blog</a>
+                        </li>
+
+                        <li class="navbar-add">
+                            <div class="navbar-cart-add">
+                                <a href="#" class="navbar-cart-link">Giỏ hàng</a>
+                                <ion-icon name="cart"></ion-icon>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
 
             <div class="cart" data-cart>
                 <ion-icon name="cart"></ion-icon>
@@ -134,6 +146,7 @@
                 </div>
 
                 <div class="slider-bottom">
+                    <h1 class="slider-title">Chọn quốc gia để bắt đầu</h1>
                     <form class="search-box">
                         <div class="input-left">
                             <input type="text" placeholder="Quốc gia" data-input-left>
@@ -148,49 +161,56 @@
                         <button class="search-btn">
                             <ion-icon name="search-outline"></ion-icon>
                         </button>
+
+
+                        <!-- search-detail -->
+                        <div class="search-detail-left" data-search-detail-left>
+                            <p class="search-detail-title">Tìm kiếm nhiều nhất</p>
+                            <span class="country-title">Quốc gia</span>
+
+                            <ul class="detail-list">
+                                <li class="detail-item">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <span class="country" data-country>Hàn Quốc</span>
+                                </li>
+
+                                <li class="detail-item">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <span class="country" data-country>Việt Nam</span>
+                                </li>
+
+                                <li class="detail-item">
+                                    <ion-icon name="location-outline"></ion-icon>
+                                    <span class="country" data-country>Nhật Bản</span>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="search-detail-right" data-search-detail-right>
+                            <ul class="day-list">
+                                <li class="day-item">
+                                    <span class="day" data-day>1 ngày</span>
+                                </li>
+
+                                <li class="day-item">
+                                    <span class="day" data-day>2 ngày</span>
+                                </li>
+
+                                <li class="day-item">
+                                    <span class="day" data-day>3 ngày</span>
+                                </li>
+
+                                <li class="day-item">
+                                    <span class="day" data-day>4 ngày</span>
+                                </li>
+                            </ul>
+                        </div>
                     </form>
 
-                    <div class="search-detail-left" data-search-detail-left>
-                        <p class="search-detail-title">Tìm kiếm nhiều nhất</p>
-                        <span class="country-title">Quốc gia</span>
 
-                        <ul class="detail-list">
-                            <li class="detail-item">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <span class="country" data-country>Hàn Quốc</span>
-                            </li>
 
-                            <li class="detail-item">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <span class="country" data-country>Việt Nam</span>
-                            </li>
 
-                            <li class="detail-item">
-                                <ion-icon name="location-outline"></ion-icon>
-                                <span class="country" data-country>Nhật Bản</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="search-detail-right" data-search-detail-right>
-                        <ul class="day-list">
-                            <li class="day-item">
-                                <span class="day" data-day>1 ngày</span>
-                            </li>
-
-                            <li class="day-item">
-                                <span class="day" data-day>2 ngày</span>
-                            </li>
-
-                            <li class="day-item">
-                                <span class="day" data-day>3 ngày</span>
-                            </li>
-
-                            <li class="day-item">
-                                <span class="day" data-day>4 ngày</span>
-                            </li>
-                        </ul>
-                    </div>
 
                     <p class="slider-bottom-text">
                         Kiểm tra thiết bị có hỗ trợ eSIM không
@@ -335,7 +355,7 @@
         </section>
 
         <!-- ADVERTISE -->
-        <section class="section advertise">
+        <section class="advertise">
             <div class="container">
                 <div class="advertise-gif">
                     <div class="gif-item">
@@ -772,13 +792,54 @@
              */
 
             $('.statistic-list').slick({
-                slidesToShow: 1,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 dots: false,
                 arrows: false,
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 3000,
+
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+
+                    },
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+
+                    },
+                    {
+                        breakpoint: 599,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             })
 
         });
