@@ -203,13 +203,33 @@ section {
     pointer-events: all;
 }
 
-.navbar-add {
+.cart-name {
     display: none;
 }
 
 
+
 /* Cart list */
 /*-------------------------*/
+
+.cart {
+    position: relative;
+}
+
+.product-quantity {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--orange);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    font-weight: var(--fw-700);
+}
 
 .cart-list {
     position: absolute;
@@ -1527,13 +1547,9 @@ question-item-title p {
     .menu-close,
     .cart-close,
     .navbar,
-    .cart-title,
-    .cart {
+    .overlay,
+    .cart-title {
         display: none;
-    }
-
-    .overlay {
-        z-index: 0;
     }
 
     .navbar,
@@ -1541,48 +1557,6 @@ question-item-title p {
     .cart-list {
         all: unset;
     }
-
-    .navbar-add {
-        display: block;
-        font-weight: var(--fw-700);
-        margin-top: 0.5rem;
-        padding-block: 1rem;
-        transition: var(--transition-1);
-    }
-
-
-    .navbar-cart-add {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: var(--transition-1);
-    }
-
-    .navbar-cart-add ion-icon {
-        color: var(--gray);
-        font-size: 2rem;
-    }
-
-    .navbar-cart-link {
-        color: #000;
-        font-size: 1.6rem;
-        font-weight: var(--fw-700);
-        cursor: default;
-    }
-
-    .cart-list {
-        display: none;
-        position: absolute;
-        top: 8rem;
-        right: 0;
-        width: 40rem;
-        padding: 2rem;
-        background-color: var(--white);
-        border-radius: 2rem;
-        transition: var(--transition-1);
-        box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-
 
     .navbox {
         display: flex;
@@ -1596,7 +1570,7 @@ question-item-title p {
         display: flex;
         align-items: center;
         gap: 2rem;
-        margin-right: 7rem;
+        margin-right: 1.5rem;
     }
 
     .navbar-item {
@@ -1614,14 +1588,81 @@ question-item-title p {
     }
 
 
-    .navbar-cart-add:hover>ion-icon,
-    .navbar-cart-link:hover {
-        color: var(--blue);
-    }
-
     .navbar-link {
         color: #000;
     }
+
+    /* -------------------- */
+    /* cart */
+    .product-quantity {
+        top: 0.1rem;
+    }
+
+    .cart-name {
+        display: block;
+        cursor: default;
+        font-weight: var(--fw-700);
+    }
+
+    .cart {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.6rem;
+        transition: var(--transition-1);
+        padding-block: 0.5rem;
+    }
+
+    .cart:hover {
+        border-bottom: 4px solid var(--blue);
+    }
+
+    .cart:hover .cart-name,
+    .cart:hover ion-icon {
+        color: var(--blue);
+    }
+
+
+    .cart ion-icon {
+        font-size: 2.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .cart-list {
+        position: absolute;
+        top: 8rem;
+        right: 0;
+        width: 40rem;
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 2rem;
+        transition: var(--transition-1);
+        box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .cart-list::after {
+        content: "";
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+        background-color: transparent;
+        width: 100%;
+        height: 3.5rem;
+    }
+
+    .cart-parent:is(:hover, :focus) .cart-list {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+    }
+
+    .cart-parent {
+        position: relative;
+    }
+
 
     /*-----------------------------------*\
      * # SLIDER
@@ -1686,13 +1727,21 @@ question-item-title p {
     }
 
     .navbar-list {
-        margin-right: 0;
+        margin-right: 2rem;
     }
 
     .cart-list {
-        right: 13rem;
+        top: 7rem;
+        right: -0.6rem;
         width: 45rem;
     }
+
+    .cart-list::after {
+
+        top: -2.2rem;
+        height: 2.5rem;
+    }
+
 
 
     /*-----------------------------------*\

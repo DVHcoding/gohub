@@ -9,7 +9,7 @@ const cart = document.querySelector("[data-cart]");
 const cartList = document.querySelector("[data-cart-list]");
 const cartClose = document.querySelector("[data-cart-close]");
 
-const navElems = [menuOpen, menuClose];
+const navElems = [menuOpen, menuClose, overlay];
 const cartElems = [cart, cartClose];
 
 for (let i = 0; i < navElems.length; i++) {
@@ -158,26 +158,3 @@ questionItems.forEach(function (item) {
 });
 
 
-/**
- * media query for cart
- */
-
-
-var navbarCart = document.querySelector('.navbar-add');
-
-navbarCart.addEventListener('click', function () {
-    if (cartList.style.display == "block") {
-        cartList.style.display = "none";
-    } else {
-        cartList.style.display = "block";
-    }
-
-    overlay.classList.add("active");
-
-    overlay.addEventListener("click", function () {
-        if (overlay.classList.contains("active")) {
-            cartList.style.display = "none";
-            overlay.classList.remove("active");
-        }
-    })
-});
