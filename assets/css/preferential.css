@@ -1,0 +1,204 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+ * #CUSTOMEs PROPERTY
+\*-----------------------------------*/
+
+
+
+section {
+    padding-block: 2rem;
+}
+
+
+/*-----------------------------------*\
+ * #PREFERENTIAL 
+\*-----------------------------------*/
+
+.preferential .container {
+    padding-inline: 1rem;
+}
+
+.preferential-banner {
+    width: 100%;
+}
+
+.preferential-banner img {
+    width: 100%;
+}
+
+
+.preferential-title {
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-weight: var(--fw-700);
+    margin-bottom: 2.2rem;
+}
+
+.preferential-gohub-title,
+.preferential-partner-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+}
+
+
+.preferential-gohub {
+    margin-bottom: 3.5rem;
+}
+
+.preferential-gohub-item,
+.preferential-partner-item {
+    width: 100%;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.preferential-gohub-link img,
+.preferential-partner-link img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-2);
+}
+
+.preferential-gohub-link,
+.preferential-partner-link {
+    overflow: hidden;
+}
+
+.preferential-gohub-link img:hover,
+.preferential-partner-link img:hover {
+    transform: scale(1.1);
+}
+
+
+.preferential-gohub-subtitle {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: var(--fw-700);
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    cursor: default;
+}
+
+.preferential-gohub-text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: var(--fw-500);
+    cursor: default;
+}
+
+.percent {
+    display: inline;
+    color: var(--orange);
+    font-weight: var(--fw-700);
+}
+
+.preferential-partner-subtitle {
+    font-size: 1.5rem;
+    font-weight: var(--fw-700);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.preferential-partner-text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: var(--fw-500);
+}
+
+
+/*-----------------------------------*\
+ * #MEDIA QUERY 
+\*-----------------------------------*/
+
+@media(min-width: 512px) {
+
+    /*-----------------------------------*\
+     * #PREFERENTIAL 
+    \*-----------------------------------*/
+    .preferential-title {
+        font-size: 2.2rem;
+    }
+
+    .preferential-gohub-title,
+    .preferential-partner-title {
+        font-size: 1.8rem;
+    }
+
+    preferential-gohub-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .preferential-gohub-text {
+        font-size: 1.4rem;
+    }
+
+    .preferential-partner-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .preferential-partner-text {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+@media(min-width: 550px) {
+
+
+    /*-----------------------------------*\
+     * #PREFERENTIAL 
+    \*-----------------------------------*/
+    .preferential .container {
+        margin-top: 3rem;
+        padding-inline: 1.5rem;
+    }
+
+    .preferential-title {
+        font-size: 2.5rem;
+    }
+
+    .preferential-gohub {
+        margin-top: 5rem;
+    }
+
+    .preferential-gohub-title,
+    .preferential-partner-title {
+        font-size: 2.5rem;
+    }
+
+    .preferential-gohub-item,
+    .preferential-partner-item {
+        width: 30%;
+    }
+}
+
+
+@media(min-width: 1200px) {
+
+
+    /*-----------------------------------*\
+     * #PREFERENTIAL 
+    \*-----------------------------------*/
+    .preferential-gohub-item,
+    .preferential-partner-item {
+        width: 32%;
+    }
+
+    .preferential-gohub-subtitle {
+        font-size: 1.7rem;
+    }
+
+    .preferential-gohub-text {
+        font-size: 1.5rem;
+    }
+}
