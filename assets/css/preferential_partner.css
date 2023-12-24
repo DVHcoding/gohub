@@ -1,0 +1,157 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+ * #CUSTOMEs PROPERTY
+\*-----------------------------------*/
+
+
+
+section {
+    padding-block: 2rem;
+}
+
+.container {
+    padding-inline: 1rem;
+}
+
+/*-----------------------------------*\
+ * #PREFERENTIAL PARTNER 
+\*-----------------------------------*/
+
+
+
+.preferential-partner-banner {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.preferential-partner-banner img {
+    width: 100%;
+}
+
+.preferential-partner-title {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 3rem;
+}
+
+.description-title {
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+
+.description {
+    margin-bottom: 8rem;
+}
+
+.description-item {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description-item span {
+    color: var(--blue);
+    display: inline;
+    font-weight: var(--fw-700);
+}
+
+/* -------------------------- */
+
+.mytralvelthru-title {
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.mytravelthru-img {
+    margin-bottom: 4rem;
+}
+
+.mytravelthru-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.mytravelthru-content {
+    font-weight: var(--fw-500);
+    line-height: 1.6;
+}
+
+/* --------------- */
+
+.using-box {
+    margin-top: 8rem;
+}
+
+.using-title {
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+
+.using-img img {
+    width: 100%;
+}
+
+@media(min-width: 512px) {
+    .container {
+        padding-inline: 2rem;
+    }
+
+    .preferential-partner-title {
+        font-size: 2.2rem;
+    }
+
+    .description-title,
+    .mytralvelthru-title,
+    .using-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .description-item {
+        font-size: 1.7rem;
+        font-weight: var(--fw-500);
+    }
+
+    .mytravelthru-content {
+        font-size: 1.7rem;
+        line-height: 1.8;
+    }
+}
+
+
+@media(min-width: 600px) {
+
+    .preferential-partner-title {
+        font-size: 2.7rem;
+        margin-bottom: 5rem;
+    }
+
+    .description-title,
+    .mytralvelthru-title,
+    .using-title {
+        font-size: 2.5rem;
+    }
+
+
+    .preferential-partner-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+
+    .description-item {
+        line-height: 1.7;
+    }
+}
+
+
+@media(min-width: 1200px) {
+
+
+    .preferential-partner-content {
+        grid-template-columns: 2fr 1fr;
+    }
+}
