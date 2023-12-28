@@ -1,0 +1,325 @@
+/*-----------------------------------*\
+ * #style.css
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+ * #CUSTOMEs PROPERTY
+\*-----------------------------------*/
+
+
+section {
+    padding-block: 2rem;
+}
+
+
+/*-----------------------------------*\
+ * #QUICK GUIDE LEFT 
+\*-----------------------------------*/
+.quick-guide .container {
+    padding-inline: 1rem;
+}
+
+
+.quick-left-title {
+    margin-bottom: 1.5rem;
+}
+
+.quick-left-item {
+    border-radius: 2rem;
+}
+
+.quick-left-link {
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: var(--fw-500);
+    margin-left: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.quick-left-item.active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/*-----------------------------------*\
+ * #QUICK GUIDE RIGHT 
+\*-----------------------------------*/
+
+.quick-right-list {
+    display: none;
+}
+
+.quick-right-list.active {
+    display: block;
+}
+
+.quick-right-item img {
+    width: 100%;
+}
+
+.right-box-content {
+    margin-bottom: 2rem;
+}
+
+.right-box-title {
+    margin-bottom: 0.8rem;
+}
+
+.right-box-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-weight: var(--fw-700);
+}
+
+.right-box-content p {
+    font-size: 1.5rem;
+    font-weight: var(--fw-500);
+}
+
+.right-box-content p span {
+    margin-top: 0.5rem;
+}
+
+
+/*-----------------------------------*\
+ * # QUESTION 
+\*-----------------------------------*/
+
+.question {
+    margin-top: 2rem;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.question-item {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.question-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.question-item-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: default;
+}
+
+question-item-title p {
+    font-size: 1.5rem;
+}
+
+.question-item-title.active {
+    color: var(--blue);
+    font-weight: var(--fw-700);
+}
+
+.question-item-title ion-icon {
+    min-width: 2.5rem;
+    transition: var(--transition-2);
+}
+
+.question-item-detail {
+    max-height: 0;
+    margin-top: 1rem;
+    padding-inline: 3.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: justify;
+    transition: max-height 0.8s var(--cubic-in);
+    overflow: hidden;
+}
+
+.question-item-detail.active {
+    max-height: 200vh;
+}
+
+
+
+/*-----------------------------------*\
+ * # FREQUENTLY 
+\*-----------------------------------*/
+.frequently-right-list {
+    display: none;
+}
+
+.frequently-left-title {
+    margin-block: 1.5rem;
+}
+
+.frequently-left-item {
+    border-radius: 2rem;
+}
+
+.frequently-left-link {
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: var(--fw-500);
+    margin-left: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.frequently-left-item.active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.frequently-right-list.active {
+    display: block;
+}
+
+
+/*-----------------------------------*\
+ * # MEDIA QUERY 
+\*-----------------------------------*/
+
+@media(min-width: 512px) {
+
+    /*-----------------------------------*\
+     * # QUICK GUIDE LEFT & FREQUENTLY 
+    \*-----------------------------------*/
+
+    .quick-guide .container {
+        margin-top: 4rem;
+    }
+
+    .quick-left-title,
+    .frequently-left-title {
+        font-size: 2.5rem;
+    }
+
+    .quick-left-item,
+    .frequently-left-item {
+        color: var(--gray);
+    }
+
+    .quick-left-link,
+    .frequently-left-link {
+        font-size: 1.5rem;
+        font-weight: var(--fw-600);
+    }
+
+    .frequently-question {
+        margin-top: 2rem;
+    }
+
+    .question-item-title p {
+        font-size: 1.7rem;
+        font-weight: var(--fw-500);
+    }
+
+    .question-item-detail {
+        padding-inline: 3.4rem;
+    }
+
+    .question-item-detail p {
+        font-size: 1.6rem;
+    }
+
+    .quick-right-list:nth-of-type(3) h3 {
+        font-size: 2.5rem;
+    }
+
+    .quick-right-list:nth-of-type(3) p,
+    .quick-right-list:nth-of-type(3) span {
+        font-size: 1.6rem;
+        font-weight: var(--fw-500);
+    }
+
+    .quick-right-list:nth-of-type(4) h4 {
+        font-size: 2.5rem;
+    }
+
+    .quick-right-list:nth-of-type(5) h4 {
+        font-size: 2.5rem;
+    }
+
+    .quick-right-list:nth-of-type(4) p,
+    .quick-right-list:nth-of-type(4) span {
+        font-size: 1.6rem;
+        font-weight: var(--fw-500);
+    }
+}
+
+@media(min-width: 620px) {
+
+    /*-----------------------------------*\
+     * # QUICK GUIDE LEFT & FREQUENTLY 
+    \*-----------------------------------*/
+    .quick-guide .container {
+        padding-inline: 2rem;
+    }
+
+    .quick-right-list:nth-of-type(2) p,
+    .quick-right-list:nth-of-type(2) span {
+        font-size: 1.7rem;
+        font-weight: var(--fw-500);
+    }
+
+    .quick-right-list:nth-of-type(2) h4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width: 850px) {
+
+    /*-----------------------------------*\
+     * # QUICK GUIDE LEFT & FREQUENTLY 
+    \*-----------------------------------*/
+
+    .quick-guide-box,
+    .frequently-box {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+    }
+
+    .quick-guide-right,
+    .frequently-right {
+        padding-inline: 3rem;
+        border-left: 1px solid #eee;
+        padding-bottom: 7rem;
+    }
+
+    .quick-left-item,
+    .frequently-left-item {
+        border-radius: 3rem;
+    }
+
+    .quick-left-link,
+    .frequently-left-link {
+        font-size: 1.4rem;
+        padding-block: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .frequently-question {
+        margin-top: 3rem;
+    }
+}
+
+@media(min-width: 1200px) {
+
+    .question-item-title p {
+        font-size: 1.8rem;
+    }
+
+    .question-item-title.active>p {
+        font-weight: var(--fw-700);
+    }
+
+    .question-item-detail p {
+        font-size: 1.6rem;
+        font-weight: var(--fw-500);
+    }
+
+}

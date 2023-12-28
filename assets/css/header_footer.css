@@ -229,6 +229,7 @@ section {
     border-radius: 50%;
     color: var(--white);
     font-weight: var(--fw-700);
+    cursor: default;
 }
 
 .cart-list {

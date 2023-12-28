@@ -229,6 +229,7 @@ section {
     border-radius: 50%;
     color: var(--white);
     font-weight: var(--fw-700);
+    cursor: default;
 }
 
 .cart-list {
@@ -1037,7 +1038,7 @@ question-item-title p {
 }
 
 .question-item-detail.active {
-    max-height: 100vh;
+    max-height: 200vh;
 }
 
 
